@@ -1,0 +1,788 @@
+@media print {
+    #printButton {
+        display: none;
+    }
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    html, body {
+        width: 1190px; /* Standard A4 width */
+        height: 1854px; /* Standard A4 height */
+    }
+
+    .container {
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.container {
+    display: block;
+    width: 100%; 
+    max-width: 1105px;
+    max-height: 2772px;
+    margin: 1px auto;
+    border: 1px solid white;
+    font-family: "MyCustomFont", "MyCustomFont2";
+}
+
+.rectangle {
+    border: 1px solid black;
+    background-color: white;
+    margin-bottom: 0px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.header-left {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.header-left-small {
+    background-color: #fff;
+    border: 1px solid #4CAF50;
+    padding: 8px;
+    width:100px;
+    height: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+}
+
+.header-left-big {
+    background-color: #fff;
+    border: 1px solid #9e854f;
+    padding: 5px;
+    width: 190px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px;
+    font-size: 22px;
+    font-family: MyCustomFont2;
+}
+
+.header-center {
+    background-color: #fff;
+    border: 1px solid #388E3C;
+    padding: 15px;
+    width: 250px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header-center::before {
+    content: "التوقيع المبارك";
+    position: absolute;
+    color: #43A047;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 0 5px;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.header-right {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 40px;
+}
+
+.row {
+    display: flex;
+    height: 100%;
+    font-size: 35px;
+}
+
+
+
+/* .cell {
+    background-color: white;
+    height: auto;
+    flex: 1;
+    border: 0.1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    padding: 2px;
+    text-align: center;
+    min-width: fit-content
+} */
+
+.cell.brown {
+    background-color: #fbf4ed;
+    min-width: fit-content;
+    height: auto;
+}
+
+.bottom-section {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.bottom-row {
+    display: flex;
+    margin-bottom: 1px;
+    font-size: 30px;
+
+}
+
+.bottom-cell {
+    flex: 1;
+    height: 50px;
+    background-color: white;
+    border: 0.1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    padding: 3px;
+    text-align: center;
+    font-family: MyCustomFont2;
+    font-size: 30px;
+}
+
+.bottom-cell-brown {
+    background-color: #fbf4ed;
+    flex: 1;
+    height:57px;
+    border: 0.1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    padding: 2px;
+    text-align: center;
+    font-weight: 250;
+}
+
+/* Updated button container to reduce overall gap */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+    font-size:28px;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.red-text {
+    color: red;
+    font-weight: bolder;
+}
+/* New Div Layout for the section between header and bottom */
+        .custom-div-container {
+            display: flex;
+            border: 1px solid #000;
+             width: 200px;
+             height: 80px;
+           margin: 5px auto;
+            border-radius: 5px;
+            overflow: hidden;
+            font-weight: bold;
+            background-color: #fafafa;
+        }
+        .custom-div-column {
+            flex: 1;
+            padding: 10px 5px;
+            text-align: center;
+            border-right: 1px solid #000;
+        }
+        /* Remove right border from last column */
+        .custom-div-column:last-child {
+            border-right: none;
+        }
+
+/* Specific control for each row */
+.first-row {
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+}
+
+.second-row {
+    margin-top: 4px;
+    padding-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+}
+
+.third-row {
+    margin-top: 4px;
+    padding-top: 4px;
+}
+
+/* Remove any margin from paragraphs inside button rows */
+.button-row p, 
+.button-row span {
+    margin: 2px;
+    padding: 2px;
+    display: inline;
+}
+
+
+  .table-container {
+      width:100%;
+      margin:5px auto;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width:100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 1px solid #0a0a0a;
+      padding:18px;
+    }
+
+    .left-cell {
+      width:90%;
+      background-color: #f2f3f5;
+    }
+s
+    .right-cell {
+      width:30%;
+      background-color: #f0ddb4;
+    }
+
+/*   Second Middle line  */
+
+    .single-table-container {
+  width: 50%;
+  margin:0px auto;
+}
+
+
+.single-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.single-table-container td {
+  border: 1px solid #ccc;
+  padding:25px;
+}
+
+.single-table-container .left-cell {
+  width: 60%;
+  background-color: #f2f3f5;
+}
+
+.single-table-container .right-cell {
+  width:35%;
+  background-color: #fbf4ed;
+}
+    /* .right-column {
+       flex: 1;
+      width: 25%;
+      padding:10px;
+      box-sizing: border-box;
+      border-left: 2px solid #333;
+      display: flex;
+      align-items:right;
+      justify-content: flex-end;
+      font-weight: bold;
+      font-size: 18px;
+    } */
+
+    /* .row1 {
+       flex: 1;
+      width:85%;
+      padding:10px;
+      box-sizing: border-box;
+      border-left: 2px solid #333;
+      display: flex;
+      align-items:right;
+      justify-content: flex-end;
+      font-weight: bold;
+      font-size: 18px;
+    } */
+/* 
+    .split-container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fafafa;
+}
+
+.split-section {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.col-left {
+  flex: 2;
+  padding: 10px;
+  background-color: #e8f0fe;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.col-right {
+  flex: 1;
+  padding: 10px;
+  background-color: #d1e7dd;
+  border: 1px solid #ccc;
+} */
+.button1 {
+    color: #4CAF50;
+    border-radius: 4px;
+    min-width: 120px;
+    border: 2px solid #ff0000;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    direction: rtl;
+    font-size: 37px;
+    font-weight: bold;
+    font-family: MyCustomFont;
+}
+
+.button2 {
+    color: #4CAF50;
+    border-radius: 4px;
+
+    min-width: 120px;
+    border: 2px solid #ff0000;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    direction: ltr;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: MyCustomFont2;
+}
+
+
+/* Style for highlighted cells */
+.cell.highlighted {
+    background-color: #4CAF50 !important;
+    color: white !important;
+}
+
+.split-container {
+    display: flex;
+    width: 100%;
+    margin: 5px 5px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    min-height: 250px;
+}
+
+.split-main {
+    flex: 9;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    min-height: auto;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.split-main-top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #000;
+}
+
+.split-main-top-upper {
+    flex: 1;
+    border-bottom: 1px solid #000 ;
+}
+
+.split-main-top-lower {
+    flex: 1;
+}
+
+.split-main-bottom {
+    flex: 1;
+}
+
+.split-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbf4ed;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.split-sidebar-top {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.split-sidebar-bottom {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    font-size:25px;
+    font-weight: bold;
+}
+
+/* Styling for the header image */
+.header-image {
+    width: 100%;
+    height: 100%; /* Ensures the image maintains its aspect ratio */
+    display: block; /* Removes any unwanted space under the image */
+}
+
+.profile-image{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+.r1cell1{
+    background-color: white;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: clamp(18px , 22px , 45px);
+    font-weight: bolder;
+    width: 18%;
+}
+
+.r1cell2{
+    background-color: #fbf4ed;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    width: 12%;
+}
+
+.r1cell3{
+    background-color: white;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    font-family: MyCustomFont3;
+    width: 6%;
+}
+
+.r1cell4{
+    background-color: #fbf4ed;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    width: 7%;
+}
+
+.r1cell5{
+    background-color: white;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    width: 30%;
+}
+
+.r1cell6{
+    background-color: #fbf4ed;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    width: 6%;
+}
+
+.r2cell1{
+    background-color: white;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    font-family: MyCustomFont3;
+    width: 7%;
+    flex: 0 0 18%;           /* smaller width */
+    padding: 4px 2px;        /* tighter padding */
+    line-height: 1.2;
+}
+
+.r2cell2{
+    background-color: #fbf4ed;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    width: 12%;
+}
+
+.r2cell3{
+    background-color: white;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    font-family: MyCustomFont2;
+    font-weight: bolder;
+    font-size: 24px;
+    width: 12%;
+    background-color: yellow;
+}
+
+.r2cell4{
+    background-color: #fbf4ed;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    width: 12%;
+}
+
+.r2cell5{
+    background-color: white;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    font-family: MyCustomFont2;
+    font-weight: bolder;
+    font-size: 24px;
+    width: 36%;
+}
+
+.r2cell6{
+    background-color: #fbf4ed;
+    display: flex;
+    border: 0.1px solid #000;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    font-family: MyCustomFont2;
+    font-weight: bolder;
+    font-size: 24px;
+    width: 21%;
+}
+
+.r3cell7{
+    background-color: #fbf4ed;
+    display: flex;
+    border-left: 1px solid #000;
+    justify-content: center;
+    align-items: right;
+    word-wrap: break-word;
+    text-align: center;
+    width: 22%;
+    text-align: right ;
+    color: red;
+}
+
+.signature-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 5;
+    gap: 70px; 
+}
+
+.signature-right {
+    margin-inline-end: 30px; 
+    display: flex;
+    margin-top: 50px;/* moves div 50px down */
+    flex-direction: column;
+    padding-bottom: 50px;
+    justify-content: flex-end;
+    flex: 4;
+    align-items: flex-end; /* Aligns content to the right */
+}
+
+.signature-container {
+    display: flex;
+    /* margin-top: 20px; */
+    margin-bottom: 120px;
+    width: 100%;
+}
+
+.signature-column {
+    display: flex;
+   /*  margin-top: 10px; */ 
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.signature-text1 {
+    color: #8a4fff;  /* Light purple color */
+    font-weight: bold;
+    font-size: 25px;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.signature-text2 {
+    color: #8a4fff;  /* Light purple color */
+
+    font-weight: bolder;
+    font-size: 25px;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.signature-space {
+    height: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust to match your .container's max-width */
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.footer-left {
+    text-align: left;
+    flex: 1;
+}
+
+.footer-right {
+    text-align: right;
+    flex: 1;
+}
+
+.footer-name1 {
+    font-weight: bold;
+}
+
+.footer-name2 {
+    font-weight: bold;
+    font-family: "MyCustomFont3";
+    direction: rtl;
+}
+
+.footer-detail {
+    margin-top: 5px;
+}
+
+.remarks{
+    height: 100% ;
+    background-color: white;
+    display: flex;
+    border: 1px solid #000;
+    justify-content: right;
+    align-items: top ;
+    word-wrap: break-word;
+    text-align: right;
+    width: 100%;
+    direction: rtl;
+    text-indent: 10px;
+    font-size: 35px;
+}
+
+.cell {
+    background-color: white;
+    border-left: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
+    padding:05px;
+    width:auto;
+}
+.cell.hidden {
+    display: none !important;
+}

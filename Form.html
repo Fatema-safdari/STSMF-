@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body bgcolor="#F8F0C6">
+    <img src="Marafiq_Logo.png" alt="Marafiq Logo" class="top-right-logo">
+    <!-- Input Form Container -->
+    <div class="form-container">
+        <!-- Search Section -->
+        <div class="search-section">
+            <h3 style="margin: 0">Enter Application Number to Fetch Details:</h3>
+            <input type="text" id="ApplicationNum" name="ApplicationNum" required>
+            <button type="button" onclick="fetchDetails()">Fetch Details</button>
+        </div>
+       
+
+        <!-- Main Form -->
+        <form id="mainForm" onsubmit="submitForm(event)">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="ApplicationNum">Application Number:</label>
+                    <input type="text" id="ApplicationNumber" name="ApplicationNum" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="ITS">ITS ID:</label>
+                    <input type="text" id="ITS" name="ITS" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="arabicFullname">Arabic Full Name:</label>
+                    <input type="text" class="myfontclass" style="direction: rtl;" id="arabicFullname" name="arabicFullname">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age">
+                </div>
+                <div class="form-group">
+                    <label for="jamiaat">Jamiaat:</label>
+                    <input type="text" class="myfontclass" style="direction: rtl;" id="jamiaat" name="jamiaat">
+                </div>
+                <div class="form-group">
+                    <label for="jamaat">Jamaat:</label>
+                    <input type="text" class="myfontclass" style="direction: rtl;" id="jamaat" name="jamaat">
+                </div>
+                <div class="form-group">
+                    <label for="CurrentPropertyType">Current Property Type:</label>
+                    <input type="text" class="myfontclass" id="CurrentPropertyType" name="CurrentPropertyType">
+                </div>
+                <div class="form-group">
+                    <label for="MontlyIncome">Montly Income:</label>
+                    <input type="text" id="MontlyIncome" name="MontlyIncome">
+                </div>
+                <div class="form-group">
+                    <label for="FamilyCount">Family Count:</label>
+                    <input type="text" id="FamilyCount" name="FamilyCount">
+                </div>
+                <div class="form-group">
+                    <label for="OwnContribution">Own Contribution:</label>
+                    <input type="text" id="OwnContribution" name="OwnContribution">
+                </div>
+                <div class="form-group">
+                    <label for="FamilyFriendsQardan">Family & Friends Qardan:</label>
+                    <input type="text" id="FamilyFriendsQardan" name="FamilyFriendsQardan">
+                </div>
+                <div class="form-group">
+                    <label for="QardanHasana">Qardan Hasana:</label>
+                    <input type="text" id="QardanHasana" name="QardanHasana">
+                </div>
+                <div class="form-group">
+                    <label for="Enayat">Enayat:</label>
+                    <input type="text" id="Enayat" name="Enayat">
+                </div>
+                <div class="form-group">
+                    <label for="HijriDate">Hijri Date:</label>
+                    <input type="text" class="myfontclass" style="direction: rtl;" id="HijriDate" name="Hijridate">
+                </div>
+                <div class="form-group">
+                    <label for="Umoor">Category :</label>
+                    <select id="dynamicDropdown" name="dynamicDropdown">
+                          <option value="option1">Form Type A</option>
+                          <option value="option2">Form Type B </option>
+                    </select>
+                   <!--  <input type="text" class="myfontclass" id="Umoor" name="Umoor"> -->
+                </div>
+                <!-- <div class="form-group">
+                    <label for="VazaratTrackingCode">Al-Vazarat Tracking Code:</label>
+                    <input type="text" id="VazaratTrackingCode" name="VazaratTrackingCode">
+                </div> -->
+                <!-- <div class="form-group">
+                    <label for="dynamicDropdown">Dynamic Dropdown</label>
+                    <select id="dynamicDropdown" name="dynamicDropdown">
+                    <!-- Options will be dynamically populated -->
+                    </select>
+
+                </div>  
+                <br>               
+                <div class="form-group">
+                    Upload Image:
+                    <input type="file" id="imageInput" accept="image/*" class="form-control">
+                    <div class="image-preview-container">
+                        <img id="imagePreview" style="max-width: 200px; max-height: 200px; margin-top: 10px; display: none;" alt="Image Preview">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="checkbox-sections">
+                <fieldset>
+                    <legend> مشاكل نو حل</legend>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="يت الخلاء مكان نا اندر">
+                            يت الخلاء مكان نا اندر
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="وسيع مكان انسس سترة (privacy)">
+                            (privacy) وسيع مكان انسس سترة
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="خود نو مكان">
+                            خود نو مكان
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="مناسب ماحول ما وسوو">
+                            مناسب ماحول ما وسوو
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="ثثاني ثثروا ني تكليف">
+                            ثثاني ثثروا ني تكليف
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="جديد مكان نو تعمير">
+                            جديد مكان نو تعمير
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="دين اداء">
+                            دين اداء
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="معاش ما كفاية">
+                            معاش ما كفاية
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="بيوه ني تكليف">
+                             بيوه ني تكليف
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="بزركك ني تكليف">
+                            بزركك ني تكليف
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="issues" value="شادي نا امور">
+                            شادي نا امور
+                        </label>
+                    </div>
+                </fieldset>
+            </div> -->
+
+            <div class="remarks-section">
+                <label for="remarks">Remarks1:</label>
+                <textarea id="remarks" name="remarks" class="myfontclass" placeholder="Enter remarks here"></textarea>
+            </div>
+
+            <div class="remarks-section">
+                <label for="remarks">Remarks2:</label>
+                <textarea id="remarks" name="remarks" class="myfontclass" placeholder="Enter remarks here"></textarea>
+            </div>
+
+            <!-- <div class="remarks-section">
+                <label for="remarks">Remarks3:</label>
+                <textarea id="remarks" name="remarks" class="myfontclass" placeholder="Enter remarks here"></textarea>
+            </div> -->
+
+
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <button onclick="logout()" class="logout-button">Logout</button>
+    
+    <script src="auth.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
